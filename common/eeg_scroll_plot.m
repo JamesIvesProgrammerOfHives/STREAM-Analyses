@@ -7,7 +7,6 @@ end
 
 if nargin == 0
     % Load an EEG dataset (replace 'filename' with your EEG data file), this is an example
-    % load('E:\Birkbeck\STREAM\Datasets\2. Preprocessed\2.2 Preprocessed_EEG\2.2.3 Rejected data\MW-1140_Rest_Vid_Face_Onset_1.mat')
     load('E:\Birkbeck\STREAM\Datasets\2. Preprocessed\2.2 Preprocessed_EEG\2.2.1 Full\MW-0186_fast_erp_14.mat')
 end
 
@@ -34,7 +33,7 @@ num_windows = floor((EEG.pnts - window_size) / step_size) + 1;
 figure;
 set(gcf, 'color', 'w')
 
-for i = 80 %1:num_windows
+for i = 1:num_windows
     % Calculate the indices for the current window
     idx_start = (i-1) * step_size + 1;
     idx_end = idx_start + window_size - 1;
